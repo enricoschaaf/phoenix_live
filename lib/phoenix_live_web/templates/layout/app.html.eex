@@ -10,7 +10,7 @@
   </head>
   <body>
     <header>
-      <section class="container">
+      <section>
         <nav role="navigation">
           <ul>
             <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
@@ -19,14 +19,14 @@
             <% end %>
           </ul>
         </nav>
-        <a href="https://phoenixframework.org/" class="phx-logo">
+        <a href="https://phoenixframework.org/">
           <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" alt="Phoenix Framework Logo"/>
         </a>
       </section>
     </header>
-    <main role="main" class="container">
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+    <main role="main">
+      <p role="alert"><%= get_flash(@conn, :info) %></p>
+      <p role="alert"><%= get_flash(@conn, :error) %></p>
       <%= @inner_content %>
     </main>
   </body>
